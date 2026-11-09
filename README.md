@@ -1,54 +1,72 @@
-# Live Stock Market & AI Direction Predictor (सस्ता या महंगा)
+# 🚀 LivePriceOfCrypto.com
 
-एक हाई-स्पीड, मोबाइल-फ्रेंडली वेब ऐप्लिकेशन जो वर्ल्ड स्टॉक मार्केट (US, Global) और NSE India के स्टॉक्स को लाइव स्कैन करता है, तुरंत बताता है कि स्टॉक **"सस्ता"** है या **"महंगा"**, और क्वांट अल्गोरिद्म से **"ऊपर जाएगा या नीचे"** की भविष्यवाणी (Probability & Targets के साथ) करता है।
+Real-time cryptocurrency price tracker built with vanilla HTML, CSS & JavaScript. Powered by the free [CoinGecko API](https://www.coingecko.com/en/api).
 
----
+![Live Preview](https://img.shields.io/badge/Status-Live-brightgreen) ![License](https://img.shields.io/badge/License-MIT-blue)
 
-## 📱 मुख्य फीचर्स (Features)
+## ✨ Features
 
-1. **100% Mobile & Desktop Responsive:**
-   - स्मार्टफोन (Android/iPhone) पर एक क्लीन ट्रेडिंग टर्मिनल की तरह खुलता है।
-   - टच-फ्रेंडली पिल्स, स्मूथ स्क्रॉलिंग, और लाइव चार्ट्स।
+- 📊 **Live Prices** — 100+ cryptocurrencies with auto-refresh every 60 seconds
+- 📈 **7-Day Sparklines** — Mini charts showing weekly price trends
+- 🔍 **Search** — Instantly filter by coin name or symbol
+- 💱 **Multi-Currency** — USD, EUR, INR, GBP, JPY, BTC
+- 📱 **Fully Responsive** — Works on all devices
+- 🌙 **Dark/Light Theme** — Toggle with one click, preference saved
+- 🔃 **Sortable Columns** — Sort by rank, name, price, change, volume, market cap
+- 📋 **Coin Details Modal** — Click any coin for detailed stats (ATH, ATL, supply)
+- 🎯 **Global Market Stats** — Total market cap, volume, BTC dominance
+- 📡 **Scrolling Ticker** — Top 15 coins in a live ticker bar
+- ⚡ **Zero Dependencies** — Pure HTML/CSS/JS, no frameworks needed
+- 🆓 **No API Key Required** — Uses CoinGecko's free public API
 
-2. **सस्ता या महंगा (Valuation Status):**
-   - **RSI (14) & 200 EMA Deviation:** जब RSI < 35 और प्राइस 200 EMA के पास हो, तो **"सस्ता (Value Buying)"**।
-   - जब RSI > 70 और प्राइस 200 EMA से बहुत ऊपर भाग चुका हो, तो **"महंगा (Overbought / Caution)"**।
-   - 0-100 का विजुअल मीटर स्कोर।
+## 🛠️ Tech Stack
 
-3. **ऊपर जाएगा या नीचे (AI Direction Prediction Engine):**
-   - **Trend Confluence:** EMA 20/50/200 क्रॉसओवर + SuperTrend + MACD मोमेंटम + वॉल्यूम।
-   - **दिशा (Direction):** ऊपर (UP - BUY) या नीचे (DOWN - SELL)।
-   - **संभावना (Probability %):** अल्गोरिद्म का एक्यूरेसी कॉन्फिडेंस (उदा. 78% UP)।
-   - **ATR-बेस्ड लेवल्स:** एंट्री, स्टॉप-लॉस (SL), टारगेट 1 और टारगेट 2।
+- **HTML5** + **CSS3** + **Vanilla JavaScript**
+- **CoinGecko API** (free, no authentication)
+- **GitHub Pages** (hosting)
 
-4. **लाइव मार्केट फीड (No Stale Data):**
-   - हर 2.5 सेकंड में ऑटो-अपडेट होने वाला रियल-टाइम डेटा।
+## 🚀 Deployment (GitHub Pages)
 
----
+1. Create a new GitHub repository (e.g., `livepriceofcrypto`)
+2. Push this code:
+   ```bash
+   cd livepriceofcrypto
+   git init
+   git add .
+   git commit -m "Initial commit - LivePriceOfCrypto.com"
+   git branch -M main
+   git remote add origin https://github.com/YOUR_USERNAME/livepriceofcrypto.git
+   git push -u origin main
+   ```
+3. Go to repo **Settings → Pages**
+4. Source: Deploy from branch → `main` → `/ (root)` → Save
+5. Add custom domain: `livepriceofcrypto.com`
+6. In your domain DNS, add:
+   - **A Records** (for apex domain):
+     ```
+     185.199.108.153
+     185.199.109.153
+     185.199.110.153
+     185.199.111.153
+     ```
+   - **CNAME Record** (for www):
+     ```
+     www → YOUR_USERNAME.github.io
+     ```
+7. Wait 5-10 minutes for DNS propagation
+8. Enable "Enforce HTTPS" in GitHub Pages settings
 
-## 🚀 GitHub पर Live कैसे करें (GitHub Pages 1-Click Guide)
+## 📁 Project Structure
 
-आप इस पूरी वेबसाइट को GitHub Pages पर बिल्कुल **मुफ़्त** में लाइव कर सकते हैं:
+```
+livepriceofcrypto/
+├── index.html     # Main HTML page (SEO optimized)
+├── style.css      # Complete stylesheet (dark/light themes)
+├── script.js      # API calls, rendering, interactions
+├── CNAME          # Custom domain for GitHub Pages
+└── README.md      # This file
+```
 
-### तरीका (Steps):
-1. **GitHub पर नया रिपॉजिटरी बनाएँ:**
-   - [GitHub.com](https://github.com) पर जाएँ और **"New Repository"** पर क्लिक करें।
-   - नाम रखें: `live-stock-predictor` और इसे **Public** रखें।
+## 📄 License
 
-2. **फाइलें अपलोड करें:**
-   - इस फोल्डर (`live-stock-predictor`) की तीनों फाइलें अपलोड करें:
-     - `index.html`
-     - `app.js`
-     - `styles.css`
-     - `README.md`
-   - Commit changes पर क्लिक करें।
-
-3. **GitHub Pages चालू करें:**
-   - अपने GitHub Repo की **Settings** में जाएँ।
-   - बाएँ मेन्यू में **Pages** पर क्लिक करें।
-   - **Branch** में `main` चुनें और `/ (root)` सेलेक्ट करके **Save** पर क्लिक करें।
-
-4. **आपकी वेबसाइट लाइव है!**
-   - 1-2 मिनट में GitHub आपको एक लाइव लिंक दे देगा:  
-     `https://<your-username>.github.io/live-stock-predictor/`
-   - यह लिंक आप अपने मोबाइल, दोस्तों या सोशल मीडिया पर कहीं भी खोल सकते हैं!
+MIT License — free to use and modify.
